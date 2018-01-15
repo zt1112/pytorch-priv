@@ -33,6 +33,7 @@ __C.CLS.arch = 'resnet18'  # model architecture
 __C.CLS.data_root = '~/Database/ILSVRC2017/Data/CLS-LOC/'  # path to dataset
 __C.CLS.train_folder = 'train'  # train folder
 __C.CLS.val_folder = 'val'  # val folder
+__C.CLS.train_crop_type = 'random_resized'
 __C.CLS.epochs = 100  # number of total epochs to run
 __C.CLS.train_batch = 256  # train batchsize of all gpus
 __C.CLS.test_batch = 200  # test batchsize
