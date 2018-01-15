@@ -280,7 +280,6 @@ def main():
                 normalize,]
 
     if os.path.isfile(cfg.CLS.train_folder):
-        # if cfg.CLS.have_data_list:
         train_datasets = CustomData(img_path=cfg.CLS.data_root,
                                     txt_path=cfg.CLS.train_folder,
                                     data_transforms=transforms.Compose(train_aug))
@@ -288,7 +287,6 @@ def main():
         val_datasets = CustomData(img_path=cfg.CLS.data_root,
                                   txt_path=cfg.CLS.val_folder,
                                   data_transforms=transforms.Compose(val_aug))
-        # else:
     elif os.path.isdir(cfg.CLS.data_root + cfg.CLS.train_folder):
         traindir = os.path.join(cfg.CLS.data_root, cfg.CLS.train_folder)
         train_datasets = datasets.ImageFolder(traindir, transforms.Compose(train_aug))
